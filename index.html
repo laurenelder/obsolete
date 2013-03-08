@@ -7,16 +7,447 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
+		<meta name="description" content="Remember details on different motorcycles when looking to buy" />
+		<meta name="keywords" content="motorcycle, shopping, puchase, buy" />
 		<meta name="robots" content="index, nofollow" />
-		<meta name="viewports" content="user-scalable=no, width=device-width" />
-		<title></title>
-		<link rel="stylesheet" type="text/css" href="">
+		<meta name="HandheldFriendly" content="True" />
+		<meta name="MobileOptimized" content="320" />
+		<meta name="viewport" content="user-scalable=no, width=device-width" />
+		<title>Bike Hunter</title>
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.0.min.css" />
 	</head>
 	<body>
-		<header></header>
-	
-		<script type="text/javascript" src=""></script>
+
+		<!-- Home Page -->
+		<div data-role="page" id="homepage">
+			<div data-role="header" data-position="fixed">
+				<h1>Bike Hunter</h1>
+			</div>
+			<section>
+				<br>
+				<a href="#addBikePage">Add a Bike Now</a>
+				<br>
+			</section>
+			<section>
+				<h3>Browse Saved Bikes By...</h3>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<a href="#sportCatPage" data-role="button"><strong><img src="">Sports Bikes</strong></a>
+					</div>
+					<div class="ui-block-b">
+						<a href="#cruiserCatPage" data-role="button"><strong><img src="">Cruiser Bikes</strong></a>
+					</div>
+					<div class="ui-block-c">
+						<a href="#dirtCatPage" data-role="button"><strong><img src="">Dirt Bikes</strong></a>
+					</div>
+					<div class="ui-block-d">
+						<a href="#otherCatPage" data-role="button"><strong><img src="">Other Bikes</strong></a>
+					</div>
+				</div>
+			</section>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li>
+							<a href="#homepage" data-icon="home" class="ui-btn-active">Home<br>Page</a>
+						</li>
+						<li>
+							<a href="#addBikePage" data-icon="plus">Add a<br>Bike</a>
+						</li>
+						<li>
+							<a href="#resultsPage" data-icon="bars">Display<br>Bikes</a>
+						</li>
+						<li>
+							<a href="#aboutPage" data-icon="info">About<br>Page</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- Sport Bikes Catagory Page -->
+		<div data-role="page" id="sportCatPage">
+			<div data-role="header" data-position="fixed">
+				<h1>Bike Hunter</h1>
+			</div>
+			<section>
+				<div data-role="content">
+					<h2>Sport Bike Catagories</h2>
+					<ul data-role="listview">
+						<li>
+							<a href="#resultsPage" id="browseSportBike">
+								<img src="">
+								<h3>Sport Bikes</h3>
+							</a>
+						</li>
+						<li>
+							<a href="#resultsPage" id="browseSportTouring">
+								<img src="">
+								<h3>Sport Touring Bikes</h3>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li>
+							<a href="#homepage" data-icon="home">Home<br>Page</a>
+						</li>
+						<li>
+							<a href="#addBikePage" data-icon="plus">Add a<br>Bike</a>
+						</li>
+						<li>
+							<a href="#resultsPage" data-icon="bars">Display<br>Bikes</a>
+						</li>
+						<li>
+							<a href="#aboutPage" data-icon="info">About<br>Page</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- Cruiser Bikes Catagory Page -->
+		<div data-role="page" id="cruiserCatPage">
+			<div data-role="header" data-position="fixed">
+				<h1>Bike Hunter</h1>
+			</div>
+			<section>
+				<div data-role="content">
+					<h2>Cruiser Bike Catagories</h2>
+					<ul data-role="listview">
+						<li>
+							<a href="#resultsPage" id="browseCruiser">
+								<img src="">
+								<h3>Cruiser Bikes</h3>
+							</a>
+						</li>
+						<li>
+							<a href="#resultsPage" id="browseStandard">
+								<img src="">
+								<h3>Standard Bikes</h3>
+							</a>
+						</li>
+						<li>
+							<a href="#resultsPage" id="browseTouring">
+								<img src="">
+								<h3>Touring Bikes</h3>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li>
+							<a href="#homepage" data-icon="home">Home<br>Page</a>
+						</li>
+						<li>
+							<a href="#addBikePage" data-icon="plus">Add a<br>Bike</a>
+						</li>
+						<li>
+							<a href="#resultsPage" data-icon="bars">Display<br>Bikes</a>
+						</li>
+						<li>
+							<a href="#aboutPage" data-icon="info">About<br>Page</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- Dirt Bikes Catagory Page -->
+		<div data-role="page" id="dirtCatPage">
+			<div data-role="header" data-position="fixed">
+				<h1>Bike Hunter</h1>
+			</div>
+			<section>
+				<div data-role="content">
+					<h2>Dirt Bike Catagories</h2>
+					<ul data-role="listview">
+						<li>
+							<a href="#resultsPage" id="browseDirt">
+								<img src="">
+								<h3>Dirt Bikes</h3>
+							</a>
+						</li>
+						<li>
+							<a href="#resultsPage" id="browseMX">
+								<img src="">
+								<h3>MX Bikes</h3>
+							</a>
+						</li>
+						<li>
+							<a href="#resultsPage" id="browseDualSport">
+								<img src="">
+								<h3>Dual Sport Bikes</h3>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li>
+							<a href="#homepage" data-icon="home">Home<br>Page</a>
+						</li>
+						<li>
+							<a href="#addBikePage" data-icon="plus">Add a<br>Bike</a>
+						</li>
+						<li>
+							<a href="#resultsPage" data-icon="bars">Display<br>Bikes</a>
+						</li>
+						<li>
+							<a href="#aboutPage" data-icon="info">About<br>Page</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- Other Bikes Catagory Page -->
+		<div data-role="page" id="otherCatPage">
+			<div data-role="header" data-position="fixed">
+				<h1>Bike Hunter</h1>
+			</div>
+			<section>
+				<div data-role="content">
+					<h2>Other Bike Catagories</h2>
+					<ul data-role="listview">
+						<li>
+							<a href="#resultsPage" id="browseCustom">
+								<img src="">
+								<h3>Custom Bikes</h3>
+							</a>
+						</li>
+						<li>
+							<a href="#resultsPage" id="browseTrike">
+								<img src="">
+								<h3>Trike Bikes</h3>
+							</a>
+						</li>
+						<li>
+							<a href="#resultsPage" id="browseScooter">
+								<img src="">
+								<h3>Scooters</h3>
+							</a>
+						</li>
+						<li>
+							<a href="#resultsPage" id="browseMoped">
+								<img src="">
+								<h3>Mopeds</h3>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li>
+							<a href="#homepage" data-icon="home">Home<br>Page</a>
+						</li>
+						<li>
+							<a href="#addBikePage" data-icon="plus">Add a<br>Bike</a>
+						</li>
+						<li>
+							<a href="#resultsPage" data-icon="bars">Display<br>Bikes</a>
+						</li>
+						<li>
+							<a href="#aboutPage" data-icon="info">About<br>Page</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- Add a Bike Page -->
+		<div data-role="page" id="addBikePage">
+			<div data-role="header" data-position="fixed">
+				<h1>Bike Hunter</h1>
+			</div>
+			<form action="" id="addBikeForm">
+				<section>
+					<ul id="errors"></ul>
+				</section>
+				<section>
+					<h3>General Information</h3>
+					<div data-role="fieldcontain">
+						<label for="bType">Bike Type:</label>
+						<select name="bikeType" id="bType">
+							<option value="Choose Type">Choose a Type</option>
+							<option value="Sport Bike">Sport Bike</option>
+							<option value="Sport Touring">Sport Touring</option>
+							<option value="Cruiser">Cruiser</option>
+							<option value="Standard">Standard</option>
+							<option value="Touring">Touring</option>
+							<option value="Dirt Bike">Dirt Bike</option>
+							<option value="MX">MX</option>
+							<option value="Dual Sport">Dual Sport</option>
+							<option value="Custom">Custom</option>
+							<option value="Trike">Trike</option>
+							<option value="Scooter">Scooter</option>
+							<option value="Moped">Moped</option>
+						</select>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="bMake">Manufacturer:</label>
+						<input type="" name="" id="" value="" style="" />
+					</div>
+					<div data-role="fieldcontain">
+						<label for="bModel">Model:</label>
+						<input type="" name="" id="" value="" style="" />
+					</div>
+					<div data-role="fieldcontain">
+						<label for="bYear">Year:</label>
+						<input type="" name="" id="" value="" style="" />
+					</div>
+					<div data-role="fieldcontain">
+						<label for="bEngine">Engine Size (cc):</label>
+						<input type="" name="" id="" value="" style="" />
+					</div>
+				</section>
+				<section>
+					<h3>Contact Information</h3>
+					<div data-role="fieldcontain">
+						<label for="bPrice">Price ($):</label>
+						<input type="" name="" id="" value="" style="" />
+					</div><div data-role="fieldcontain">
+						<label for="bLocation">Location:</label>
+						<input type="" name="" id="" value="" style="" />
+					</div><div data-role="fieldcontain">
+						<label for="bNumber">Contact Number:</label>
+						<input type="" name="" id="" value="" style="" />
+					</div>
+					<div data-role="fieldcontain">
+						<fieldset data-role="controlgroup">
+							<legend>New or Pre-Owned</legend>
+							<input type="radio" value="New" name="newOrUsed" id="newOne" />
+							<label for="newOne">New</label>
+							<input type="radio" value="Pre-Owned" name="newOrUsed" id="usedOne" />
+							<label for="usedOne">Pre-Owned</label>
+						</fieldset>
+					</div>
+				</section>
+				<section>
+					<h3>Aftermarket Parts</h3>
+					<div data-role="fieldcontain">
+						<fieldset data-role="controlgoup">
+							<legend>Check All That Apply...</legend>
+							<input type="checkbox" value="Has Aftermarket Lighting" name="checkbox" id="has_lighting" />
+							<label for="has_lighting">Aftermarket Lighting</label>
+							<input type="checkbox" value="Has Aftermarket Handlebars" name="checkbox" id="has_bars" />
+							<label for="has_bars">Aftermarket Handlebars</label>
+							<input type="checkbox" value="Has Aftermarket Seats" name="checkbox" id="has_seats" />
+							<label for="has_seats">Aftermarket Seats</label>
+							<input type="checkbox" value="Has Aftermarket Body Parts" name="checkbox" id="has_body_parts" />
+							<label for="has_body_parts">Aftermarket Body Parts</label>
+							<input type="checkbox" value="Has Aftermarket Intake" name="checkbox" id="has_intake" />
+							<label for="has_intake">Aftermarket Intake</label>
+							<input type="checkbox" value="Has Aftermarket Exhaust" name="checkbox" id="has_exhaust" />
+							<label for="has_exhaust">Aftermarket Exhaust</label>
+							<input type="checkbox" value="Has Aftermarket Wheels" name="checkbox" id="has_wheels" />
+							<label for="has_wheels">Aftermarket Wheels</label>
+							
+						</fieldset>
+					</div>
+				</section>
+				<section>
+					<h3>Additional Information</h3>
+					<div data-role="fieldcontain">
+						<label for="interest">Amount of Interest:</label>
+						<input type="range" name="interest" id="interest" min="1" max="100" />
+						<div data-role="fieldcontain">
+							<label for="notes">Notes:</label>
+							<textarea id="notes"></textarea>
+						</div>
+					</div>
+				</section>
+				<section>
+					<p>
+						<a href="#homepage" type="submit" id="submit" data-role="button" style="font-style:bold"><strong>Save Bike</strong></a>
+						<a href="#homepage" id="cancel" data-role="button">Cancel</a>
+					</p>
+				</section>
+			</form>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li>
+							<a href="#homepage" data-icon="home">Home<br>Page</a>
+						</li>
+						<li>
+							<a href="#addBikePage" data-icon="plus" class="ui-btn-active">Add a<br>Bike</a>
+						</li>
+						<li>
+							<a href="#resultsPage" data-icon="bars">Display<br>Bikes</a>
+						</li>
+						<li>
+							<a href="#aboutPage" data-icon="info">About<br>Page</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- Results Page -->
+		<div data-role="page" id="resultsPage">
+			<div data-role="header" data-position="fixed">
+				<h1>Bike Hunter</h1>
+			</div>
+
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li>
+							<a href="#homepage" data-icon="home">Home<br>Page</a>
+						</li>
+						<li>
+							<a href="#addBikePage" data-icon="plus">Add a<br>Bike</a>
+						</li>
+						<li>
+							<a href="#resultsPage" data-icon="bars" class="ui-btn-active">Display<br>Bikes</a>
+						</li>
+						<li>
+							<a href="#aboutPage" data-icon="info">About<br>Page</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- About Page -->
+		<div data-role="page" id="aboutPage">
+			<div data-role="header" data-position="fixed">
+				<h1>Bike Hunter</h1>
+			</div>
+
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li>
+							<a href="#homepage" data-icon="home">Home<br>Page</a>
+						</li>
+						<li>
+							<a href="#addBikePage" data-icon="plus">Add a<br>Bike</a>
+						</li>
+						<li>
+							<a href="#resultsPage" data-icon="bars">Display<br>Bikes</a>
+						</li>
+						<li>
+							<a href="#aboutPage" data-icon="info" class="ui-btn-active">About<br>Page</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.3.0.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
