@@ -2,3 +2,12 @@
 /* ASD Term 1303 */
 /* ASD Application */
 /* 03/05/2013 */
+
+li {
+	list-style-type: none;
+}
+
+ul {
+	margin-top: 20px;
+	margin-left: -20px;
+}
