@@ -55,7 +55,7 @@
 							<a href="#homepage" data-icon="home" class="ui-btn-active">Home<br>Page</a>
 						</li>
 						<li>
-							<a href="#addBikePage" data-icon="plus">Add a<br>Bike</a>
+							<a href="#addBikePage" data-icon="plus" id="addBike">Add a<br>Bike</a>
 						</li>
 						<li>
 							<a href="#resultsPage" data-icon="bars" id="allBikes">Display<br>Bikes</a>
@@ -99,10 +99,10 @@
 							<a href="#homepage" data-icon="home">Home<br>Page</a>
 						</li>
 						<li>
-							<a href="#addBikePage" data-icon="plus">Add a<br>Bike</a>
+							<a href="#addBikePage" data-icon="plus" id="addBike">Add a<br>Bike</a>
 						</li>
 						<li>
-							<a href="#resultsPage" data-icon="bars">Display<br>Bikes</a>
+							<a href="#resultsPage" data-icon="bars" id="allBikes">Display<br>Bikes</a>
 						</li>
 						<li>
 							<a href="#aboutPage" data-icon="info">About<br>Page</a>
@@ -149,10 +149,10 @@
 							<a href="#homepage" data-icon="home">Home<br>Page</a>
 						</li>
 						<li>
-							<a href="#addBikePage" data-icon="plus">Add a<br>Bike</a>
+							<a href="#addBikePage" data-icon="plus" id="addBike">Add a<br>Bike</a>
 						</li>
 						<li>
-							<a href="#resultsPage" data-icon="bars">Display<br>Bikes</a>
+							<a href="#resultsPage" data-icon="bars" id="allBikes">Display<br>Bikes</a>
 						</li>
 						<li>
 							<a href="#aboutPage" data-icon="info">About<br>Page</a>
@@ -199,10 +199,10 @@
 							<a href="#homepage" data-icon="home">Home<br>Page</a>
 						</li>
 						<li>
-							<a href="#addBikePage" data-icon="plus">Add a<br>Bike</a>
+							<a href="#addBikePage" data-icon="plus" id="addBike">Add a<br>Bike</a>
 						</li>
 						<li>
-							<a href="#resultsPage" data-icon="bars">Display<br>Bikes</a>
+							<a href="#resultsPage" data-icon="bars" id="allBikes">Display<br>Bikes</a>
 						</li>
 						<li>
 							<a href="#aboutPage" data-icon="info">About<br>Page</a>
@@ -255,10 +255,10 @@
 							<a href="#homepage" data-icon="home">Home<br>Page</a>
 						</li>
 						<li>
-							<a href="#addBikePage" data-icon="plus">Add a<br>Bike</a>
+							<a href="#addBikePage" data-icon="plus" id="addBike">Add a<br>Bike</a>
 						</li>
 						<li>
-							<a href="#resultsPage" data-icon="bars">Display<br>Bikes</a>
+							<a href="#resultsPage" data-icon="bars" id="allBikes">Display<br>Bikes</a>
 						</li>
 						<li>
 							<a href="#aboutPage" data-icon="info">About<br>Page</a>
@@ -299,40 +299,40 @@
 					</div>
 					<div data-role="fieldcontain">
 						<label for="bMake">Manufacturer:</label>
-						<input type="" name="" id="" value="" style="" />
+						<input type="text" id="bMake" value="" style="" />
 					</div>
 					<div data-role="fieldcontain">
 						<label for="bModel">Model:</label>
-						<input type="" name="" id="" value="" style="" />
+						<input type="text" id="bModel" value="" style="" />
 					</div>
 					<div data-role="fieldcontain">
 						<label for="bYear">Year:</label>
-						<input type="" name="" id="" value="" style="" />
+						<input type="text" id="bYear" value="" style="" />
 					</div>
 					<div data-role="fieldcontain">
 						<label for="bEngine">Engine Size (cc):</label>
-						<input type="" name="" id="" value="" style="" />
+						<input type="text" id="bEngine" value="" style="" />
 					</div>
 				</section>
 				<section>
 					<h3>Contact Information</h3>
 					<div data-role="fieldcontain">
 						<label for="bPrice">Price ($):</label>
-						<input type="" name="" id="" value="" style="" />
+						<input type="text" id="bPrice" value="" style="" />
 					</div><div data-role="fieldcontain">
 						<label for="bLocation">Location:</label>
-						<input type="" name="" id="" value="" style="" />
+						<input type="text" id="bLocation" value="" style="" />
 					</div><div data-role="fieldcontain">
 						<label for="bNumber">Contact Number:</label>
-						<input type="" name="" id="" value="" style="" />
+						<input type="text" id="bNumber" value="" style="" />
 					</div>
 					<div data-role="fieldcontain">
 						<fieldset data-role="controlgroup">
 							<legend>New or Pre-Owned:</legend>
-							<input type="radio" value="New" name="newOrUsed" id="bOwned" />
-							<label for="newOne">New</label>
-							<input type="radio" value="Pre-Owned" name="newOrUsed" id="bOwned" />
-							<label for="usedOne">Pre-Owned</label>
+							<input type="radio" value="New" name="newOrUsed" id="bOwned1" />
+							<label for="bOwned1">New</label>
+							<input type="radio" value="Pre-Owned" name="newOrUsed" id="bOwned2" />
+							<label for="bOwned2">Pre-Owned</label>
 						</fieldset>
 					</div>
 				</section>
@@ -341,19 +341,19 @@
 					<div data-role="fieldcontain">
 						<fieldset data-role="controlgoup">
 							<legend>Check All That Apply...</legend>
-							<input type="checkbox" value="Has Aftermarket Lighting:" name="checkbox" id="has_lighting" />
+							<input type="checkbox" value="No" name="checkbox" id="has_lighting" />
 							<label for="has_lighting">Aftermarket Lighting</label>
-							<input type="checkbox" value="Has Aftermarket Handlebars:" name="checkbox" id="has_bars" />
+							<input type="checkbox" value="No" name="checkbox" id="has_bars" />
 							<label for="has_bars">Aftermarket Handlebars</label>
-							<input type="checkbox" value="Has Aftermarket Seats:" name="checkbox" id="has_seats" />
+							<input type="checkbox" value="No" name="checkbox" id="has_seats" />
 							<label for="has_seats">Aftermarket Seats</label>
-							<input type="checkbox" value="Has Aftermarket Body Parts:" name="checkbox" id="has_body_parts" />
+							<input type="checkbox" value="No" name="checkbox" id="has_body_parts" />
 							<label for="has_body_parts">Aftermarket Body Parts</label>
-							<input type="checkbox" value="Has Aftermarket Intake:" name="checkbox" id="has_intake" />
+							<input type="checkbox" value="No" name="checkbox" id="has_intake" />
 							<label for="has_intake">Aftermarket Intake</label>
-							<input type="checkbox" value="Has Aftermarket Exhaust:" name="checkbox" id="has_exhaust" />
+							<input type="checkbox" value="No" name="checkbox" id="has_exhaust" />
 							<label for="has_exhaust">Aftermarket Exhaust</label>
-							<input type="checkbox" value="Has Aftermarket Wheels:" name="checkbox" id="has_wheels" />
+							<input type="checkbox" value="No" name="checkbox" id="has_wheels" />
 							<label for="has_wheels">Aftermarket Wheels</label>
 							
 						</fieldset>
@@ -363,7 +363,7 @@
 					<h3>Additional Information</h3>
 					<div data-role="fieldcontain">
 						<label for="interest">Amount of Interest:</label>
-						<input type="range" name="interest" id="interest" min="1" max="100" />
+						<input type="range" name="interest" id="interest" min="1" max="100" value=""/>
 						<div data-role="fieldcontain">
 							<label for="notes">Notes:</label>
 							<textarea id="notes"></textarea>
@@ -384,10 +384,10 @@
 							<a href="#homepage" data-icon="home">Home<br>Page</a>
 						</li>
 						<li>
-							<a href="#addBikePage" data-icon="plus" class="ui-btn-active">Add a<br>Bike</a>
+							<a href="#addBikePage" data-icon="plus" class="ui-btn-active" id="addBike">Add a<br>Bike</a>
 						</li>
 						<li>
-							<a href="#resultsPage" data-icon="bars">Display<br>Bikes</a>
+							<a href="#resultsPage" data-icon="bars" id="allBikes">Display<br>Bikes</a>
 						</li>
 						<li>
 							<a href="#aboutPage" data-icon="info">About<br>Page</a>
@@ -406,7 +406,7 @@
 				<a href="#homepage" data-role="button" id="clearAllBikes">Clear All Bikes</a>
 				<h2>Displaying Motorcycles</h2>
 				<div id="item">
-					<ul id="results"></ul>
+					<ul data-role="content" id="results"></ul>
 				</div>
 			</section>
 			<div data-role="footer" data-position="fixed">
@@ -416,10 +416,10 @@
 							<a href="#homepage" data-icon="home">Home<br>Page</a>
 						</li>
 						<li>
-							<a href="#addBikePage" data-icon="plus">Add a<br>Bike</a>
+							<a href="#addBikePage" data-icon="plus" id="addBike">Add a<br>Bike</a>
 						</li>
 						<li>
-							<a href="#resultsPage" data-icon="bars" class="ui-btn-active">Display<br>Bikes</a>
+							<a href="#resultsPage" data-icon="bars" class="ui-btn-active" id="allBikes">Display<br>Bikes</a>
 						</li>
 						<li>
 							<a href="#aboutPage" data-icon="info">About<br>Page</a>
@@ -447,10 +447,10 @@
 							<a href="#homepage" data-icon="home">Home<br>Page</a>
 						</li>
 						<li>
-							<a href="#addBikePage" data-icon="plus">Add a<br>Bike</a>
+							<a href="#addBikePage" data-icon="plus" id="addBike">Add a<br>Bike</a>
 						</li>
 						<li>
-							<a href="#resultsPage" data-icon="bars">Display<br>Bikes</a>
+							<a href="#resultsPage" data-icon="bars" id="allBikes">Display<br>Bikes</a>
 						</li>
 						<li>
 							<a href="#aboutPage" data-icon="info" class="ui-btn-active">About<br>Page</a>
