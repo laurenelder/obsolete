@@ -6,9 +6,11 @@
 $("#homepage").on("pageinit", function() {
 	$("#allBikes").click(function() {
 		getData("yes", "no");
+		$('#addBikeForm').clearForm();
 	});
 	$("#addBike").click(function() {
-		clearFields();
+		$('#addBikeForm').clearForm();
+		$("#submit").data("key", "");
 	});
 });
 
@@ -113,11 +115,11 @@ $("#resultsPage").on("pageinit", function() {
 			}
 		}
 	});
-	$("#edit").click(function() {
-		clearFields();
-			alert("Hiya!");
-			var value = window.localStorage.getItem(this.key);
+	$(".edit").click(function() {
+			var itemKey = $('.edit').data('key');
+			var value = window.localStorage.getItem(itemKey);
 			var item = JSON.parse(value);
+			console.log(itemKey);
 			$("#bType").val(item.bType[1]);
 			$("#bMake").val(item.bMake[1]);
 			$("#bModel").val(item.bModel[1]);
@@ -155,15 +157,10 @@ $("#resultsPage").on("pageinit", function() {
 			};
 			$("#interest").val(item.interest[1]);
 			$("#notes").val(item.notes[1]);
-			//$("#submit").attr("key", this.key).val("Edit Bike");
-
-			var editSubmit = document.getElementById("submit");
-			editSubmit.value = "Edit Bike";
-			editSubmit.key = this.key;
-			$("#submit").key = this.key;
+			$("#submit").data("key", itemKey)
 			$("#submit").click(function() {
 			//$("#submit").attr("key", this.key);
-				storeData(this.key);
+				storeData(itemKey);
 			});
 	});
 	$("#delete").click(function() {
@@ -192,49 +189,70 @@ $("#aboutPage").on("pageinit", function() {
 	});
 });
 
-// Clear Fields
-	var clearFields = function() {
-		$("input:text").val("");
-		$("input:radio").removeAttr("checked");
-		$("input:checkbox").removeAttr("checked");
-		$("#bType").val("Choose a Bike");
-		$("#notes").val("");
+// Reset Fields Function
+	var resetFields = function() {
+		$(":input").not(":button, :submit, :reset, :hidden").each(function () {
+			this.value = this.defaultValue;
+		});
 	};
+
+// Clear Fields Function
+	var clearFields = function() {
+		$("#addBikePage").find(':input').each(function() {
+	        switch(this.type) {
+	            case 'select-one':
+	            case 'text':
+	            case 'textarea':
+	                $(this).val('');
+	                break;
+	            case 'checkbox':
+	            case 'radio':
+	                this.checked = false;
+	        };
+	    });
+	};
+
+// Clear Form Fields Function
+$.fn.clearForm = function() {
+  return this.each(function() {
+    var type = this.type, tag = this.tagName.toLowerCase();
+    if (tag == 'form') {
+      return $(':input',this).clearForm();
+	};
+    if (type == 'text' || tag == 'textarea') {
+      this.value = '';
+	}
+    else if (type == 'checkbox' || type == 'radio') {
+      this.checked = false;
+	}
+    else if (tag == 'select') {
+      this.value = "Choose Type";
+	}
+  });
+};
+//usage
+// $('#flightsSearchForm').clearForm();
 
 // Auto Fill Data Function
 	var autoFillData = function() {
-		for (var n in json) {
-			var id = Math.floor(Math.random() * 1000001);
-			window.localStorage.setItem(id, JSON.stringify(json[n]));
-		};
-	};
+		var id = Math.floor(Math.random() * 1000001);
+		$.ajax({
+			type:"get",
+			url:"json.js",
+			format:"json",
+			success:function(data){
+				window.localStorage.setItem(id, JSON.stringify(data));
+		}});
+		$.ajax({
+			type: "get",
+			url:"data.xml",
+			dataType:"xml",
+			success:function(data) {
+				xmlData = $(xml).find("url").each().text();
+				window.localStorage.setItem(id, xmlData);
+		}});
+		
 
-// Make Links Function
-	var makeItemLinks = function(key, linksLi) {
-
-		// Edit Link
-		var editLink = document.createElement("a");
-		editLink.href = "#addBikePage";
-		editLink.key = key;
-		editLink.setAttribute("id", "edit");
-		var editText = "Edit Bike"
-//		editLink.addEventListener("click", editItem);
-		editLink.innerHTML = editText;
-		linksLi.appendChild(editLink);
-
-		// Break Tag
-		var breakTag = document.createElement("br");
-		linksLi.appendChild(breakTag);
-
-		// Delete Link
-		var deleteLink = document.createElement("a");
-		deleteLink.href = "#homepage";
-		deleteLink.key = key;
-		deleteLink.setAttribute("id", "delete");
-		var deleteText = "Delete Bike";
-//		deleteLink.addEventListener("click", deleteItem);
-		deleteLink.innerHTML = deleteText;
-		linksLi.appendChild(deleteLink);
 	};
 
 // Display All Data function
@@ -245,24 +263,31 @@ $("#aboutPage").on("pageinit", function() {
 		}
 		$("#item").attr("display", "block");
 		$("#results").empty();
-		for (var i = 0, j = window.localStorage.length; i < j; i ++) {
-			var makeLi = document.createElement("li");
-			var linksLi = document.createElement("li");
-			$("#results").append(makeLi);
+		for (var i = 1, j = window.localStorage.length; i <= j; i++) {
+			$("#results").append("<li></li>");
+			$("#results li").attr("id", "makeLi");
 			var key = window.localStorage.key(i);
 			var value = window.localStorage.getItem(key);
 			var obj = JSON.parse(value);
-			var makeSubList = document.createElement("ul");
-			makeLi.appendChild(makeSubList);
+			$("#makeLi").append("<ul></ul>");
+			$("#makeLi ul").attr("id", "makeSubList");
+			//var makeSubList = document.createElement("ul");
+			//makeLi.appendChild(makeSubList);
 			if (all == "yes" || obj.bType[1] == cat) {
+				var content = "";
 				for(var n in obj) {
-					var makeSubLi = document.createElement("li");
-					makeSubList.appendChild(makeSubLi);
-					var optSubText = obj[n][0] + " " + obj[n][1];
-					makeSubLi.innerHTML = optSubText;
-					makeSubList.appendChild(linksLi);
+					content += '<li>';
+					content += obj[n][0] + " " + obj[n][1];
+					content += '</li>'
 				};
-			makeItemLinks(window.localStorage.key(i), linksLi);
+				$("#makeSubList").append(content);
+				$("#makeSubList").append('<li class="linksLi"></li>');
+				$(".linksLi:last").append('<a href="#addBikePage">Edit Bike</a>').addClass("edit");
+				$(".edit:last").data("key", key);
+				console.log($(".edit").data("key", key));
+				$(".linksLi:last").append("<br/>");
+				$(".linksLi:last").append('<a href="#homepage" class="delete">Delete Bike</a>');
+				$(".delete:last").data("key", key);
 			};
 		};
 	};
@@ -296,6 +321,6 @@ $("#aboutPage").on("pageinit", function() {
 			item.interest		= ["Interest: ", $("#interest").val()];
 			item.notes			= ["Notes: ", $("#notes").val()];
 		window.localStorage.setItem(id, JSON.stringify(item));
-		//window.localStorage.setItem(id, JSON.stringify(item));
 		alert("Bike Saved!");
+		clearFields();
 	};

@@ -83,6 +83,25 @@ var json = {
 		"has_wheels": ["Has Aftermarket Wheels:", "No"],
 		"interest": ["Interest:", "50"],
 		"notes": ["Notes:", "Color: Black"]
-	}
+	},
+	"bike5": {
+		"bType": ["Bike Type:", "Scooter"],
+		"bMake": ["Manufacturer:", "Honda"],
+		"bModel": ["Model:", "PCX150"],
+		"bYear": ["Year:", "2013"],
+		"bEngine": ["Engine Size (cc):", "150"],
+		"bPrice": ["Price ($):", "3449"],
+		"bLocation": ["Location:", "Irvine, CA"],
+		"bNumber": ["Contact Number:", "(111)222-3333"],
+		"bOwned": ["New or Pre-Owned:", "New"],
+		"has_lighting": ["Has Aftermarket Lighting:", "No"],
+		"has_bars": ["Has Aftermarket Handlebars:", "No"],
+		"has_seats": ["Has Aftermarket Seats:", "No"],
+		"has_body_parts": ["Has Aftermarket Body Parts:", "No"],
+		"has_intake": ["Has Aftermarket Intake:", "No"],
+		"has_exhaust": ["Has Aftermarket Exhaust:", "No"],
+		"has_wheels": ["Has Aftermarket Wheels:", "No"],
+		"interest": ["Interest:", "08"],
+		"notes": ["Notes:", "Color: Red"]
 	
 }

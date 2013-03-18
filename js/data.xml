@@ -1,0 +1,107 @@
+<!-- Devin "Lauren" Elder -->
+<!-- ASD Term 1303 -->
+<!-- ASD Application -->
+<!-- 03/05/2013 -->
+
+-<xml>
+	-<Bike1>
+		<Bike_Type>Touring</Bike_Type>
+		<Manufacturer>Honda</Manufacturer>
+		<Model>Goldwing</Model>
+		<Year>2013</Year>
+		<Engine_Size_(cc)>1832</Engine_Size_>
+		<Price_($)>19999</Price_($)>
+		<Location>Kissimmee, FL</Location>
+		<Contact_Number>(111)222-3333</Contact_Number>
+		<New_or_Pre-Owned>New</New_or_Pre-Owned>
+		<Has_Aftermarket_Lighting>No</Has_Aftermarket_Lighting>
+		<Has_Aftermarket_Handlebars>No</Has_Aftermarket_Handlebars>
+		<Has_Aftermarket_Seats>No</Has_Aftermarket_Seats>
+		<Has_Aftermarket_Body_Parts>No</Has_Aftermarket_Body>
+		<Has_Aftermarket_Intake>No</Has_Aftermarket_Intake>
+		<Has_Aftermarket_Exhaust>No</Has_Aftermarket_Exhaust>
+		<Has_Aftermarket_Wheels>No</Has_Aftermarket_Wheels>
+		<Interest>12</Interest>
+		<Notes>Color: Black</Notes>
+	</Bike1>
+	-<Bike2>
+		<Bike_Type>Custom</Bike_Type>
+		<Manufacturer>Honda</Manufacturer>
+		<Model>Fury Custom</Model>
+		<Year>2013</Year>
+		<Engine_Size_(cc)>1300</Engine_Size_>
+		<Price_($)>12999</Price_($)>
+		<Location>Greensville, NC</Location>
+		<Contact_Number>(111)222-3333</Contact_Number>
+		<New_or_Pre-Owned>New</New_or_Pre-Owned>
+		<Has_Aftermarket_Lighting>No</Has_Aftermarket_Lighting>
+		<Has_Aftermarket_Handlebars>No</Has_Aftermarket_Handlebars>
+		<Has_Aftermarket_Seats>No</Has_Aftermarket_Seats>
+		<Has_Aftermarket_Body Parts>No</Has_Aftermarket_Body>
+		<Has_Aftermarket_Intake>Yes</Has_Aftermarket_Intake>
+		<Has_Aftermarket_Exhaust>Yes</Has_Aftermarket_Exhaust>
+		<Has_Aftermarket_Wheels>Yes</Has_Aftermarket_Wheels>
+		<Interest>80</Interest>
+		<Notes>Color: Red</Notes>
+	</Bike2>
+	-<Bike3>
+		<Bike_Type>MX</Bike_Type>
+		<Manufacturer>Honda</Manufacturer>
+		<Model>CRF450r</Model>
+		<Year>2013</Year>
+		<Engine_Size_(cc)>450</Engine_Size_>
+		<Price_($)>7485</Price_($)>
+		<Location>Marysville, OH</Location>
+		<Contact_Number>(111)222-3333</Contact_Number>
+		<New_or_Pre-Owned>New</New_or_Pre-Owned>
+		<Has_Aftermarket_Lighting>No</Has_Aftermarket_Lighting>
+		<Has_Aftermarket_Handlebars>No</Has_Aftermarket_Handlebars>
+		<Has_Aftermarket_Seats>No</Has_Aftermarket_Seats>
+		<Has_Aftermarket_Body Parts>No</Has_Aftermarket_Body>
+		<Has_Aftermarket_Intake>No</Has_Aftermarket_Intake>
+		<Has_Aftermarket_Exhaust>No</Has_Aftermarket_Exhaust>
+		<Has_Aftermarket_Wheels>No</Has_Aftermarket_Wheels>
+		<Interest>72</Interest>
+		<Notes>Color: White and Red</Notes>
+	</Bike3>
+	-<Bike4>
+		<Bike_Type>Sport Bike</Bike_Type>
+		<Manufacturer>Honda</Manufacturer>
+		<Model>CBR500R</Model>
+		<Year>2013</Year>
+		<Engine_Size_(cc)>500</Engine_Size_>
+		<Price_($)>5999</Price_($)>
+		<Location>Tampa, FL</Location>
+		<Contact_Number>(111)222-3333</Contact_Number>
+		<New_or_Pre-Owned>New</New_or_Pre-Owned>
+		<Has_Aftermarket_Lighting>No</Has_Aftermarket_Lighting>
+		<Has_Aftermarket_Handlebars>No</Has_Aftermarket_Handlebars>
+		<Has_Aftermarket_Seats>No</Has_Aftermarket_Seats>
+		<Has_Aftermarket_Body Parts>No</Has_Aftermarket_Body>
+		<Has_Aftermarket_Intake>No</Has_Aftermarket_Intake>
+		<Has_Aftermarket_Exhaust>Yes</Has_Aftermarket_Exhaust>
+		<Has_Aftermarket_Wheels>No</Has_Aftermarket_Wheels>
+		<Interest>60</Interest>
+		<Notes>Color: Black</Notes>
+	</Bike4>
+	-<Bike5>
+		<Bike_Type>Cruiser</Bike_Type>
+		<Manufacturer>Kymco</Manufacturer>
+		<Model>Venox</Model>
+		<Year>2007</Year>
+		<Engine_Size_(cc)>250</Engine_Size_>
+		<Price_($)>2200</Price_($)>
+		<Location>Foley, AL</Location>
+		<Contact_Number>(111)222-3333</Contact_Number>
+		<New_or_Pre-Owned>Used</New_or_Pre-Owned>
+		<Has_Aftermarket_Lighting>No</Has_Aftermarket_Lighting>
+		<Has_Aftermarket_Handlebars>No</Has_Aftermarket_Handlebars>
+		<Has_Aftermarket_Seats>No</Has_Aftermarket_Seats>
+		<Has_Aftermarket_Body Parts>Yes</Has_Aftermarket_Body>
+		<Has_Aftermarket_Intake>Yes</Has_Aftermarket_Intake>
+		<Has_Aftermarket_Exhaust>No</Has_Aftermarket_Exhaust>
+		<Has_Aftermarket_Wheels>No</Has_Aftermarket_Wheels>
+		<Interest>30</Interest>
+		<Notes>Color: Black</Notes>
+	</Bike5>
+</xml>
